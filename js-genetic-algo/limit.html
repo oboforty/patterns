@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+      <script src="ra.min.js"></script>
+      <script src="util.js"></script>
+      <script src="builds_fitness.js"></script>
+    </head>
+    <body>
+        <script>
+            const GW2 = new GW2Builds('exotic');
+
+            GW2.load_stats((stats)=>{
+                console.log(stats);
+                
+                let b = GW2.config_to_stats({
+                    'wep': "Diviner's",
+                    // 'chest': "Giver's",
+                    //'legs': "Giver's",
+                    'chest': "Diviner's",
+                    'legs': "Giver's",
+
+                    'head': "Giver's",
+                    'shoulders': "Giver's",
+                    'gloves': "Giver's",
+                    'boots': "Giver's",
+                    'amulet': "Harrier's",
+                    'ring1': "Harrier's",
+                    'ring2': "Harrier's",
+                    'earring1': "Harrier's",
+                    'earring2': "Harrier's",
+                    'back': "Berserker's",
+                });
+
+                console.log(GW2.getBuildFromMutant(b));
+            }, new Set([
+                'BoonDuration',
+                'Power'
+            ]), new Set([/*"Harrier's", "Marshal's"*/]));
+
+        </script>
+    </body>
+</html>

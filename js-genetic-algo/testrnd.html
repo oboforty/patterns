@@ -1,0 +1,14 @@
+
+<script src="ra.min.js"></script>
+<script src="util.js"></script>
+<script>
+  
+  var b = defaultdict(int, true);
+  
+  for (var i = 0; i < 100000; i++) {
+      var r = Math.floor(getRandom()*18);
+      b[r]++;
+  }
+
+  console.log(b);
+</script>

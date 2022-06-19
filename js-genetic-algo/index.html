@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+      <script src="ra.min.js"></script>
+      <script src="util.js"></script>
+      <script src="builds_fitness.js"></script>
+
+      <script src="builds/general.js"></script>
+      <script src="builds/ranger.js"></script>
+
+      <script src="app.js"></script>
+    </head>
+    <body>
+      <button onclick="stopgen()">STOP</button>
+        <p>
+            <div id="op">
+                <h3>Absolute best:</h3>
+                <ul>
+                    <li><b>Best Weapon:</b> <span id="op_wep"></span></li>
+                    <li><b>Best chest:</b> <span id="op_chest"></span></li>
+                    <li><b>Best legs:</b> <span id="op_legs"></span></li>
+                    <li><b>Best head:</b> <span id="op_head"></span></li>
+                    <li><b>Best shoulders:</b> <span id="op_shoulders"></span></li>
+                    <li><b>Best gloves:</b> <span id="op_gloves"></span></li>
+                    <li><b>Best boots:</b> <span id="op_boots"></span></li>
+                    <li><b>Best amulet:</b> <span id="op_amulet"></span></li>
+                    <li><b>Best ring1:</b> <span id="op_ring1"></span></li>
+                    <li><b>Best ring2:</b> <span id="op_ring2"></span></li>
+                    <li><b>Best earring1:</b> <span id="op_earring1"></span></li>
+                    <li><b>Best earring2:</b> <span id="op_earring2"></span></li>
+                    <li><b>Best back:</b> <span id="op_back"></span></li>
+                    <li><b>TOTAL:</b> <span id="op_total"></span></li>
+                    <li><b>FITNESS:</b> <span id="op_fitness"></span></li>
+                </ul>
+            </div>
+            <hr/>
+            
+            <ul>
+              <li>
+                mutation rate : <span id="mutationRate"></span>
+              </li>
+              <li>
+                average fitness: <span id="avgFitness"></span>
+              </li>
+              <li>
+                total population: <span id="maxPop"></span>
+              </li>
+              <li>
+                total generations : <span id="counter"></span>
+              </li>
+            </ul>
+            <div id="best">
+                <h3>Best in current generation:</h3>
+                <ul>
+                    <li><b>Best Weapon:</b> <span id="best_wep"></span></li>
+                    <li><b>Best chest:</b> <span id="best_chest"></span></li>
+                    <li><b>Best legs:</b> <span id="best_legs"></span></li>
+                    <li><b>Best head:</b> <span id="best_head"></span></li>
+                    <li><b>Best shoulders:</b> <span id="best_shoulders"></span></li>
+                    <li><b>Best gloves:</b> <span id="best_gloves"></span></li>
+                    <li><b>Best boots:</b> <span id="best_boots"></span></li>
+                    <li><b>Best amulet:</b> <span id="best_amulet"></span></li>
+                    <li><b>Best ring1:</b> <span id="best_ring1"></span></li>
+                    <li><b>Best ring2:</b> <span id="best_ring2"></span></li>
+                    <li><b>Best earring1:</b> <span id="best_earring1"></span></li>
+                    <li><b>Best earring2:</b> <span id="best_earring2"></span></li>
+                    <li><b>Best back:</b> <span id="best_back"></span></li>
+                    <li><b>TOTAL:</b> <span id="best_total"></span></li>
+                    <li><b>FITNESS:</b> <span id="best_fitness"></span></li>
+                </ul>
+            </div>
+          </p>
+          <div id="genetic"></div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+{
+    "iso": "HU",
+    "items": {
+        "food": 10,
+        "gold": 30
+    },
+    "lvl": 5,
+    "sid": "myent",
+    "wid": "wid1"
+}

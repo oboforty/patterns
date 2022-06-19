@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <canvas width="200" height="200" id="canvas"></canvas>
+
+  <script src="IsoRenderer.js"></script>
+  <script>
+  var loaded = 0;
+
+  function generateMap(domId, map) {
+      var TW = 64;
+      var canvas = document.getElementById(domId);
+      var renderer = new IsoRenderer(TW, TW*7 + 0.75*TW, TW);
+
+      renderer.setCtx(canvas.getContext("2d"));
+      renderer.loadTileset("mob", "img/monsters.png", 64, 8, function(){
+          if (++loaded > 2) {
+              renderer.renderIsoFormat(map);
+          }
+      });
+      renderer.loadTileset("tile", "img/tiles.png", 64, 16, function(){
+          if (++loaded > 2) {
+              renderer.renderIsoFormat(map);
+          }
+      });
+  }
+
+
+  var map = {
+    "meta": {
+      "name": "Zelux welcome map",
+      "width": 6, "height": 6,
+      "wireframe": {
+        "color": "rgb(78,108,108)",
+        "offsetX": 16,
+        "block": true
+      }
+    },
+    "content": [
+      [0, 0, 0, 0],
+      [0, 0, 0, 0],
+      [0, 0, 0, 0],
+      [0, 0, 0, 0]
+    ]
+  };
+
+
+  generateMap("myMap", map)
+  </script>
+</body>
+</html>
