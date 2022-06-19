@@ -1,0 +1,21 @@
+
+List services:
+	systemctl list-units
+
+
+Add service:
+	> Add startgeopoly.sh
+		chmod 775 startgeopoly.sh
+
+	> Add .service file to
+		/lib/systemd/system/
+		or
+		/etc/systemd/system/
+		
+	> Enable service and notify systemctl
+		systemctl enable geopoly.service
+		systemctl daemon-reload
+
+	> Start / stop service
+		systemctl start geopoly.service
+		systemctl stop geopoly.service

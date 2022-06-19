@@ -1,0 +1,12 @@
+[Unit]
+Description=geopoly ws server daemon
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/geopoly
+ExecStart=/home/geopoly/geopolyenv/bin/python /home/geopoly/game.py
+
+[Install]
+WantedBy=multi-user.target

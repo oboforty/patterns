@@ -1,0 +1,85 @@
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04
+
+    Update your local package index and then install the packages by typing:
+
+apt-get update
+apt-get install python-pip python-dev nginx
+
+pip install virtualenv
+pip install gunicorn flask
+
+
+    Create a Python Virtual Environment
+
+
+
+
+mkdir ~/geopoly
+cd ~/geopoly
+
+virtualenv geopolyenv
+
+source geopolyenv/bin/activate
+
+    
+
+    Set Up a Flask Application
+
+nano ~/geopoly/geopoly.py
+python geopoly.py
+
+    ```
+    from flask import Flask
+    application = Flask(__name__)
+
+    @application.route("/")
+    def hello():
+        return "<h1 style='color:blue'>Hello There!</h1>"
+
+    if __name__ == "__main__":
+        application.run(host='0.0.0.0')
+    ```
+
+    Create the WSGI Entry Point
+nano ~/geopoly/wsgi.py
+
+    ```
+    from geopoly import application
+
+    if __name__ == "__main__":
+        application.run()
+    ```
+
+cd ~/geopoly
+gunicorn --bind 0.0.0.0:8000 wsgi
+
+deactivate
+
+
+    Create a Daemon for geopoly
+    
+    !! TODO: uptodate ez? megnez mi van a szerveren !!
+
+sudo nano /etc/nginx/sites-available/geopoly
+
+    ```
+    server {
+        listen 80;
+        server_name server_domain_or_IP;
+
+        location / {
+            include proxy_params;
+            proxy_pass http://unix:/home/user/geopoly/geopoly.sock;
+        }
+    }
+
+    ```
+
+sudo ln -s /etc/nginx/sites-available/geopoly /etc/nginx/sites-enabled
+
+sudo nginx -t
+
+sudo service nginx restart
+
+
+

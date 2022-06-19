@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuicServer", "QuicServer\QuicServer.csproj", "{546C5375-3BF5-401F-AEA3-8AD644104828}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuicClient", "QuicClient\QuicClient.csproj", "{10BADC67-EB88-4CE5-BEB9-1BFFCD9D5F37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{546C5375-3BF5-401F-AEA3-8AD644104828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546C5375-3BF5-401F-AEA3-8AD644104828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546C5375-3BF5-401F-AEA3-8AD644104828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546C5375-3BF5-401F-AEA3-8AD644104828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BADC67-EB88-4CE5-BEB9-1BFFCD9D5F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BADC67-EB88-4CE5-BEB9-1BFFCD9D5F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BADC67-EB88-4CE5-BEB9-1BFFCD9D5F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BADC67-EB88-4CE5-BEB9-1BFFCD9D5F37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C575346-248D-4F5D-A623-CC8E5F003387}
+	EndGlobalSection
+EndGlobal

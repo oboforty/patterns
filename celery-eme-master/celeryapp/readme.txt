@@ -1,0 +1,1 @@
+Example celery app

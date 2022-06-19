@@ -1,0 +1,13 @@
+$ sudo apt-get install certbot -t jessie-backports
+
+
+certbot certonly
+
+
+certbot certonly --webroot -w /var/www/example -d example.com -d www.example.com -w /var/www/thing -d thing.is -d m.thing.is
+
+certbot certonly --standalone -d geopoly.net -d www.geopoly.net
+
+  Renewal
+
+certbot renew --dry-run

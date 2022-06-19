@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d9a100d4c520e479fbd7fc6ead2eaf, type: 3}
+  m_Name: '[D] _biome'
+  m_EditorClassIdentifier: 
+  Name: Desert
+  WorldBounds: {x: 8, y: 16, z: 8}
+  athmosphereDepth: 3
+  Tree: {fileID: 11400000, guid: 6fc165a92444fb64b9c47eca01d6002e, type: 2}
+  TreeLeaf: {fileID: 11400000, guid: 4bb8a60e529a4b849b99db6d4889746f, type: 2}
+  TreeToGrassRatio: 0.044
+  treeLeafMax: 1
+  treeLeafMin: 1
+  treeTrunkMax: 2
+  treeTrunkMin: 2
+  DirtSurface: {fileID: 11400000, guid: 82235789cc54022419426bb9542a4259, type: 2}
+  StoneSurface: {fileID: 11400000, guid: f0d84be429b850e4799b00a6cc23ea91, type: 2}
+  defaultStoneChance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.1005249
+      inSlope: -0.11790581
+      outSlope: -0.11790581
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.5234873
+    - serializedVersion: 3
+      time: 0.7135497
+      value: 0.26774296
+      inSlope: 1.8624108
+      outSlope: 1.8624108
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.095772244
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9958282
+      value: 0.4447599
+      inSlope: 0.015998868
+      outSlope: 0.015998868
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.6173753
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Dirt: {fileID: 11400000, guid: 617b0bb6bcf58c0408adb5b848441b38, type: 2}
+  Stone: {fileID: 11400000, guid: 613add6a8e954c84d8d52d595a6697c8, type: 2}
+  spawnableBlocks:
+  - block: {fileID: 11400000, guid: 7dbe0c4891bd64f48a8dbbde41d63907, type: 2}
+    blockSurface: {fileID: 0}
+    totalSpawnNumber: 40
+    spawnRate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0

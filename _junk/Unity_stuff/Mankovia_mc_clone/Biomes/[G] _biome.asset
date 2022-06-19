@@ -1,0 +1,296 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d9a100d4c520e479fbd7fc6ead2eaf, type: 3}
+  m_Name: '[G] _biome'
+  m_EditorClassIdentifier: 
+  Name: Grassy
+  WorldBounds: {x: 8, y: 16, z: 8}
+  athmosphereDepth: 4
+  Tree: {fileID: 11400000, guid: f49531ed9e1ac6d4bb73d80a8f7d9519, type: 2}
+  TreeLeaf: {fileID: 11400000, guid: c44e6c73b731ef744a9751044b83feaf, type: 2}
+  TreeToGrassRatio: 0.15
+  treeLeafMax: 2
+  treeLeafMin: 1
+  treeTrunkMax: 2
+  treeTrunkMin: 1
+  DirtSurface: {fileID: 11400000, guid: de53d1dc2f5fd8c4d81315945231602d, type: 2}
+  StoneSurface: {fileID: 11400000, guid: cd7382520021f3c41bb4df55dbc7d2b4, type: 2}
+  defaultStoneChance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.027820535
+      inSlope: 0.47166383
+      outSlope: 0.47166383
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.5614164
+    - serializedVersion: 3
+      time: 0.36665955
+      value: 0.18497807
+      inSlope: 0.0084599145
+      outSlope: 0.0084599145
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.34869176
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.99875754
+      inSlope: 0.17041662
+      outSlope: 0.17041662
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.68369305
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Dirt: {fileID: 11400000, guid: 617b0bb6bcf58c0408adb5b848441b38, type: 2}
+  Stone: {fileID: 11400000, guid: 613add6a8e954c84d8d52d595a6697c8, type: 2}
+  spawnableBlocks:
+  - block: {fileID: 11400000, guid: 7dbe0c4891bd64f48a8dbbde41d63907, type: 2}
+    blockSurface: {fileID: 0}
+    totalSpawnNumber: 80
+    spawnRate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.40416667
+        value: 0.9733492
+        inSlope: 0.5780808
+        outSlope: 0.5780808
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.31958762
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.34999847
+        inSlope: -0.44884956
+        outSlope: -0.44884956
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.37762243
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - block: {fileID: 11400000, guid: 7dbe0c4891bd64f48a8dbbde41d63907, type: 2}
+    blockSurface: {fileID: 0}
+    totalSpawnNumber: 72
+    spawnRate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.40416667
+        value: 0.9733492
+        inSlope: 0.5780808
+        outSlope: 0.5780808
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.31958762
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.34999847
+        inSlope: -0.44884956
+        outSlope: -0.44884956
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.37762243
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - block: {fileID: 11400000, guid: cd80bc9970eeabf49b7b30c30299c2f8, type: 2}
+    blockSurface: {fileID: 0}
+    totalSpawnNumber: 16
+    spawnRate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.33327922
+        value: 0.07262282
+        inSlope: 0.029786186
+        outSlope: 0.029786186
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.31471816
+        outWeight: 0.31055796
+      - serializedVersion: 3
+        time: 0.53067696
+        value: 0.4473846
+        inSlope: 0.8455124
+        outSlope: 0.8455124
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.24999855
+      - serializedVersion: 3
+        time: 0.9874878
+        value: 0.36816788
+        inSlope: 0.068273336
+        outSlope: 0.068273336
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.5678867
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - block: {fileID: 11400000, guid: 1e628e08ee0e6e841b13cf1c282882b5, type: 2}
+    blockSurface: {fileID: 0}
+    totalSpawnNumber: 12
+    spawnRate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: -0.0041656494
+        value: 0
+        inSlope: -0.01750901
+        outSlope: -0.01750901
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.21161745
+      - serializedVersion: 3
+        time: 0.5608957
+        value: 0.0060331747
+        inSlope: 0.008923492
+        outSlope: 0.008923492
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.47810423
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - block: {fileID: 11400000, guid: f38bb2bf0d5fd994cb33bb50f2ee79b3, type: 2}
+    blockSurface: {fileID: 0}
+    totalSpawnNumber: 50
+    spawnRate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.82916665
+        value: 0.9764105
+        inSlope: 0.5217978
+        outSlope: 0.5217978
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.24999814
+        outWeight: 0.48148182
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.05443899
+        outSlope: 0.05443899
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.5342421
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0
+  - block: {fileID: 11400000, guid: 8cf5e215675f26846a89fd6b9743435c, type: 2}
+    blockSurface: {fileID: 0}
+    totalSpawnNumber: 40
+    spawnRate:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.088378906
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.34583533
+        value: 0.9919512
+        inSlope: 0.044590674
+        outSlope: 0.044590674
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.45360824
+        outWeight: 0.30188563
+      - serializedVersion: 3
+        time: 1.0083313
+        value: 0.8801956
+        inSlope: -0.08637399
+        outSlope: -0.08637399
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.34693772
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 0

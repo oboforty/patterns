@@ -1,0 +1,9 @@
+SystemD files:
+	/usr/lib/systemd/
+	/var/lib/systemd/
+	/etc/systemd/system/ (gunicorn)
+
+
+
+Geopoly game server:
+/etc/systemd/system/gameserver.service

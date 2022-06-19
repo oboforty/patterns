@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Btn Editor</title>
+</head>
+<body>
+  <canvas id="canvas" width="160" height="160" style="border: solid 1px red"></canvas>
+
+  <img id="out">
+
+  <script src="ra.min.js"></script>
+  <script src="lib.js"></script>
+  <script type="text/javascript">
+    const canvas = $("#canvas");
+    const ctx = canvas.getContext('2d');
+
+    const add_comp = false;
+  
+
+    if (add_comp) {
+      var newImg = new Image;
+      var bgImg = new Image;
+
+      bgImg.onload = function() {
+        ctx.drawImage(bgImg, 0,0);
+
+        newImg.onload = function() {
+          ctx.drawImage(newImg, 30, 30);
+
+          draw_btn();
+        }
+        newImg.src = 'test.png';
+      }
+      bgImg.src = 'bg.png';
+    } else {
+      // ctx.fillStyle = 'green';
+      // ctx.fillRect(0,0,550,300);
+
+      draw_btn();
+      var image = canvas.toDataURL("image/png");
+
+      $("#out").src = image;
+    }
+
+
+    function draw_btn() {
+      const x = 0, y = 0;
+      const width = 160, height = 160;
+      const rad = 20, grad = rad*0.76;
+      const F = [4,2,8,7];
+
+      let glass_edge = new Color("#DFDFDF");
+      let glass = new Color("#ffffff");
+      let glass2 = new Color("#ecf0f1");
+      let edge = new Color("#000000");
+      let bg = new Color("#E0E0E0");
+      bg.a = 0.78;
+
+      // draw shadow
+      roundRect(ctx, {
+        x: x, y: y,
+        width: width, height: height,
+        radius: rad,
+
+        stroke: null,
+        fill: edge.rgba
+      });
+      ctx.globalCompositeOperation = "destination-out";
+      roundRect(ctx, {
+        x: x+F[0], y: y+F[1],
+        width: width-F[2], height: height-F[3]-2,
+        radius: grad,
+
+        stroke: null,
+        fill: edge.rgba
+      });
+
+
+      // cover bg
+      if (add_comp) {
+        ctx.globalCompositeOperation = "destination-over";
+
+        ctx.drawImage(bgImg, 
+          x+F[0], y+F[1],
+          width-F[2], height-F[3],
+          x+F[0], y+F[1],
+          width-F[2], height-F[3],
+        );
+      }
+
+      ctx.globalCompositeOperation = "source-over";
+      
+      const GS = 5;
+
+      var gradient = ctx.createRadialGradient(
+        x+(width-GS*2)/2+GS, y+(height/2)/2,
+        10,
+        x+(width-GS*2)/2+GS, y+(height/2)/2,
+        70
+      );
+      var gradient = ctx.createLinearGradient(
+        x+(width-GS*2)/2+GS, y+GS,
+        x+(width-GS*2)/2+GS, y+height/2
+      );
+      glass.a = 0.9;
+      glass2.a = 0.7;
+      gradient.addColorStop(0, glass.rgba);
+      gradient.addColorStop(1, glass2.rgba);
+      //ctx.fillStyle = gradient;
+
+      const OF = 8;
+
+
+      ctx.lineWidth = 2.5;
+      // transparent effect
+      roundRect(ctx, {
+        x: x+F[0], y: y+F[1],
+        width: width-F[2], height: height-F[3]-2,
+        radius: grad,
+
+        stroke: glass_edge.rgba,
+        fill: bg.rgba
+      });
+
+
+
+      // glass effect
+      roundRect(ctx, {
+        x: x+OF, y: y+OF-2,
+        width: width-OF*2, height: 0.425*height,
+        radius: 11,
+
+        stroke: null,
+        fill: gradient
+      });
+
+      ctx.globalCompositeOperation = "source-over";
+
+      // DRAW BG & reference
+      // ctx.drawImage(newImg, y, 30);
+
+
+    }
+
+  </script>
+</body>
+</html>

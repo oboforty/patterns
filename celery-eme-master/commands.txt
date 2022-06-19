@@ -1,0 +1,11 @@
+
+sudo rabbitmq-server -detached
+
+sudo rabbitmqctl stop
+
+
+
+celery worker -A hello --loglevel=info
+
+
+celery purge

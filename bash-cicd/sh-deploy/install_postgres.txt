@@ -1,0 +1,42 @@
+https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-debian-8
+
+
+	Setup geopoly user:
+CREATE DATABASE salud;
+CREATE USER geopoly WITH PASSWORD 'F...';
+GRANT ALL PRIVILEGES ON DATABASE salud TO geopoly;
+
+	
+nano /etc/postgresql/9.6/main/pg_hba.conf
+
+	add md5 to user geopoly
+
+/etc/init.d/postgresql reload
+
+psql -d salud -U geopoly
+
+
+	Extensions:
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "postgis";
+
+
+	[todo: add postgis/postgres repo to jesse source repo list]
+
+apt-get install postgresql-9.6-postgis-2.3 pgadmin3 postgresql-contrib-9.6
+
+
+
+login:
+	psql -d salud -U geopoly
+
+	\q to quit
+
+superuser login:
+	su postgres
+	psql -d salud
+
+list extensions:
+	SELECT * FROM pg_extension
+

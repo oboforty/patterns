@@ -1,0 +1,6 @@
+# log with filtering:
+adb logcat -v time | python adb_logparser.py
+
+# clear:
+adb logcat -c
+

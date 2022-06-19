@@ -1,0 +1,11 @@
+port            protocol        service
+
+80, 443         http/s          Website
+6379            TCP             Redis
+5432            TCP             Database
+8080            http            PHP utility service
+8888            http            Jupyter notebook
+9000            ?               reserved
+9001 - 9010     WS (rws)        Game server
+9030            RPC/?           Voice chat server
+9050            TCP (tcpickle)  Scheduler service
